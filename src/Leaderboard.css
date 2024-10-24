@@ -1,0 +1,121 @@
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0; /* Remove default margin */
+}
+
+.leaderboard {
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    padding: 20px; /* Added padding around the leaderboard */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Spacing above the table */
+}
+
+th, td {
+    padding: 15px; /* Increased padding for better spacing */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px; /* Slightly larger font size for better readability */
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+thead:hover{
+    background-color: #f4f4f4;
+}
+
+tr:hover {
+    background-color: #e0f7fa;
+}
+
+h2 {
+    font-size: 28px; /* Increased font size for headings */
+    margin-bottom: 30px; /* Increased spacing below heading */
+}
+
+.search-bar {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px; /* Space below the search bar */
+    width: 20px; /* Ensures the search bar takes full width */
+    background-color: #f4f4f4;
+}
+
+input {
+    width: 100%;
+    padding: 12px 10px; /* Added more padding for better touch area */
+    padding-left: 40px; /* Adjust for the icon */
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Rounded corners for the input */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url('./assets/search-icon.svg') no-repeat center center; /* Update path */
+    background-size: 20px 20px;
+}
+
+td img {
+    width: 40px; /* Slightly larger for better visibility */
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px; /* More space between the image and text */
+}
+
+.position {
+    display: flex;
+    align-items: center;
+}
+
+.position span {
+    color: green;
+    margin-left: 8px; /* Slightly more space */
+    font-size: 14px; /* Increased font size for clarity */
+}
+
+.points {
+    font-weight: bold;
+    font-size: 16px; /* Adjusted font size for emphasis */
+}
+
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px; /* Space between rows on smaller screens */
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px; /* More padding for better touch area */
+        border-bottom: 1px solid #ddd;
+    }
+
+    td:before {
+        content: attr(data-label);
+        flex-basis: 50%;
+        font-weight: bold;
+        margin-right: 10px; /* Space between label and content */
+    }
+}

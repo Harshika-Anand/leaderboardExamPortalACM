@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Leaderboard from './Leaderboard';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const leaderboardData = [
+        { name: "John Doe", quizScore: 45, codingScore: 9, isCurrentUser: false },
+        { name: "Tatvam Jain", quizScore: 50, codingScore: 100, isCurrentUser: true },
+        { name: "Alex Smith", quizScore: 40, codingScore: 90, isCurrentUser: false },
+        { name: "Jane Roe", quizScore: 45, codingScore: 95, isCurrentUser: false }
+    ];
+
+    return (
+        <div>
+            <Leaderboard data={leaderboardData} />
+        </div>
+    );
+};
 
 export default App;
